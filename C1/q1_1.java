@@ -1,21 +1,26 @@
 public class q1_1 {
-    public static int[] NonZeros(int[] A) {
-        int nonz = 0;
-        for (int i=0; i < A.length; i++) 
-            if ( A[i]!=0) nonz++;
-        int [] B = new int [nonz];
-        int j = 0;
-        for (int i=0; i < A.length; i++) {
-            if ( A[i] != 0) {
-                B[j] = A[i];
-                j++;
-            }        
+    public boolean determine_Unique ( string [] A ) {
+        int B [];
+        B = new int [256];
+        for (char c : A) {
+            if (B[(int)c] == 1)
+                return false;
+            else
+                B[(int)c] = 1;
         }
-    return B;
-    }     
-    public static void main(String[] args) {
-        int [] A = {1, 22, 0};
-        int [] B = NonZeros(A);
-        for (int i = 0; i < B.length; i++) System.out.print(B[i] + ", ");
+        return true;
+    }
+    
+    public static void main(String [] args) {
+        System.out.println( dertermine_Unique(args[1]));
     }
 }
+
+
+        
+ 
+
+
+
+    
+
