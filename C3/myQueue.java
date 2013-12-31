@@ -1,4 +1,4 @@
-public class Queue {
+public class Queue<Node> {
     Node front, back;
     void enqueue(Object item) {
         if (front == null) {
